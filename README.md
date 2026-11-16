@@ -28,3 +28,20 @@ de las que encuentra.
 
 ### Verificación
 Los botones, la card, las alertas y los inputs de `componentes.html` comparten estos radios, espaciados y colores, y se pueden recorrer completos con `Tab`.
+
+## MiniReto 5 - Layout de la landing
+
+### Grid o flex
+- **Encabezado y pie: flex.** Son una sola fila de elementos de tamaños distintos (logo,
+  enlaces, botón). Flex reparte el espacio en una dirección, con `justify-between` y
+  `items-center`.
+- **Rutas: grid de 3 columnas.** Las tres cards deben medir lo mismo y alinearse en
+  columnas, así que `grid grid-cols-3 gap-6` me da el ancho igual sin calcular nada.
+- **Pasos de "¿Cómo funciona?": grid de 4 columnas.** Los cuatro pasos tienen la misma
+  estructura (número, título y texto) y deben verse parejos. Con `grid-cols-4` cada paso
+  recibe exactamente un cuarto del ancho. Con flex, el ancho de cada paso dependería de su
+  contenido y quedarían desiguales.
+
+### Contenedor
+Encabezado, secciones y pie usan `max-w-6xl mx-auto px-6`, por eso todo queda alineado.
+
