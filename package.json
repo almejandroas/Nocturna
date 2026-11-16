@@ -1,0 +1,25 @@
+{
+  "name": "nocturna",
+  "version": "1.0.0",
+  "description": "**Semana 2 (Bootstrap):** Con boostrap crear botones solo se compone de una clase que es btn, que contiene ya predeterminadas formas e interacciones propias, lo unico que se le puede cambiar es su color de relleno asignandosele.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almejandroas/Nocturna.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/almejandroas/Nocturna/issues"
+  },
+  "homepage": "https://github.com/almejandroas/Nocturna#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5"
+  }
+}
