@@ -45,3 +45,30 @@ Los botones, la card, las alertas y los inputs de `componentes.html` comparten e
 ### Contenedor
 Encabezado, secciones y pie usan `max-w-6xl mx-auto px-6`, por eso todo queda alineado.
 
+## MiniReto 6 - Landing responsive
+
+### Qué se rompía a 360 px (versión de escritorio)
+(Escribe aquí lo que viste tú. Por ejemplo: el encabezado se salía del ancho y
+aparecía scroll horizontal; las rutas quedaban en tres columnas muy angostas; los pasos
+quedaban en cuatro columnas con el texto cortado; el pie quedaba apretado.)
+
+### Enfoque mobile-first
+Las clases sin prefijo son las del celular. Con `sm:` (640 px), `md:` (768 px) y
+`lg:` (1024 px) se agregan los cambios para pantallas más grandes. El celular no usa prefijo.
+
+### Resultados por ancho
+| Ancho | Encabezado | Enlaces del encabezado | Rutas | Pasos | Pie | Scroll horizontal |
+|---|---|---|---|---|---|---|
+| 360 px | Apilado | Ocultos, solo el botón | 1 columna | 1 columna | Apilado | No |
+| 768 px | En fila | Visibles | 2 columnas | 2 columnas | En fila | No |
+| 1024 px | En fila | Visibles | 3 columnas | 4 columnas | En fila | No |
+| 1280 px | En fila | Visibles | 3 columnas | 4 columnas | En fila | No |
+
+### Ajustes por breakpoint
+- Título principal: `text-4xl` en celular y `lg:text-6xl` desde 1024 px.
+- Títulos de sección: `text-2xl` y `lg:text-3xl`.
+- Relleno de las secciones: `py-12` y `lg:py-20`.
+
+### Cambios en las cards
+Quité `max-w-sm` para que llenen su columna y agregué `gap-4` en las filas de datos
+para que no se peguen cuando la card es angosta.

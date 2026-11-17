@@ -8,15 +8,17 @@
 </head>
 <body class="bg-slate-900">
 
-  <!-- ENCABEZADO: flex, logo a la izquierda y enlaces + botón a la derecha -->
+  <!-- ENCABEZADO
+       Celular: apilado (flex-col). Desde md: en fila (md:flex-row) -->
   <header class="border-b border-slate-700">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col items-center gap-4 md:flex-row md:justify-between">
 
       <a href="#inicio" class="text-xl font-bold text-white">Rueda Nocturna</a>
 
       <div class="flex items-center gap-6">
 
-        <nav aria-label="Principal">
+        <!-- Celular: oculto (hidden). Desde md: visible (md:block) -->
+        <nav aria-label="Principal" class="hidden md:block">
           <ul class="flex gap-6">
             <li><a href="#inicio" class="rounded-lg text-slate-300 hover:text-white focus:outline-hidden focus:ring-4 focus:ring-amber-200">Inicio</a></li>
             <li><a href="#rutas" class="rounded-lg text-slate-300 hover:text-white focus:outline-hidden focus:ring-4 focus:ring-amber-200">Rutas</a></li>
@@ -35,15 +37,17 @@
 
   <main>
 
-    <!-- SECCIÓN PRINCIPAL -->
-    <section id="inicio" class="py-16">
+    <!-- SECCIÓN PRINCIPAL
+         Relleno: py-12 en celular, py-20 desde lg.
+         Título: text-4xl en celular, text-6xl desde lg -->
+    <section id="inicio" class="py-12 lg:py-20">
       <div class="max-w-6xl mx-auto px-6 space-y-6 text-center">
 
         <p class="text-sm font-semibold uppercase tracking-widest text-amber-400">
           Nuevo · Jueves a sábado
         </p>
 
-        <h1 class="text-5xl font-bold leading-tight text-white">
+        <h1 class="text-4xl font-bold leading-tight text-white lg:text-6xl">
           Rueda Nocturna
         </h1>
 
@@ -64,18 +68,19 @@
       </div>
     </section>
 
-    <!-- RUTAS: grid de 3 columnas -->
-    <section id="rutas" class="py-16">
+    <!-- RUTAS
+         Celular: 1 columna. Desde sm: 2 columnas. Desde lg: 3 columnas -->
+    <section id="rutas" class="py-12 lg:py-20">
       <div class="max-w-6xl mx-auto px-6 space-y-8">
 
-        <h2 class="text-2xl font-bold text-center text-white">Rutas</h2>
+        <h2 class="text-2xl font-bold text-center text-white lg:text-3xl">Rutas</h2>
 
-        <div class="grid grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
           <!-- Card 1 -->
-          <article class="w-full max-w-sm overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-md hover:border-amber-400 hover:shadow-xl">
+          <article class="w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-md hover:border-amber-400 hover:shadow-xl">
 
-            <img src="img/luces-del-centro.png"
+            <img src="./img/luces-del-centro.png"
                  alt="Ciclistas con luces LED en el centro de Medellín"
                  class="h-48 w-full object-cover">
 
@@ -88,15 +93,15 @@
               <h3 class="text-2xl font-bold text-white">Luces del Centro</h3>
 
               <dl class="space-y-2">
-                <div class="flex justify-between">
+                <div class="flex justify-between gap-4">
                   <dt class="text-sm text-slate-400">Distancia</dt>
                   <dd class="font-semibold text-white">10 km</dd>
                 </div>
-                <div class="flex justify-between">
+                <div class="flex justify-between gap-4">
                   <dt class="text-sm text-slate-400">Duración</dt>
                   <dd class="font-semibold text-white">2 h</dd>
                 </div>
-                <div class="flex justify-between">
+                <div class="flex justify-between gap-4">
                   <dt class="text-sm text-slate-400">Punto de encuentro</dt>
                   <dd class="font-semibold text-white">Sede de Rueda Libre</dd>
                 </div>
@@ -114,7 +119,7 @@
           </article>
 
           <!-- Card 2 -->
-          <article class="w-full max-w-sm overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-md hover:border-amber-400 hover:shadow-xl">
+          <article class="w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-md hover:border-amber-400 hover:shadow-xl">
 
             <img src="./img/mirador-medellín.png"
                  alt="Vista nocturna de Medellín desde un mirador"
@@ -129,15 +134,15 @@
               <h3 class="text-2xl font-bold text-white">Miradores de la Ciudad</h3>
 
               <dl class="space-y-2">
-                <div class="flex justify-between">
+                <div class="flex justify-between gap-4">
                   <dt class="text-sm text-slate-400">Distancia</dt>
                   <dd class="font-semibold text-white">16 km</dd>
                 </div>
-                <div class="flex justify-between">
+                <div class="flex justify-between gap-4">
                   <dt class="text-sm text-slate-400">Duración</dt>
                   <dd class="font-semibold text-white">3 h</dd>
                 </div>
-                <div class="flex justify-between">
+                <div class="flex justify-between gap-4">
                   <dt class="text-sm text-slate-400">Punto de encuentro</dt>
                   <dd class="font-semibold text-white">Sede de Rueda Libre</dd>
                 </div>
@@ -155,7 +160,7 @@
           </article>
 
           <!-- Card 3 -->
-          <article class="w-full max-w-sm overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-md hover:border-amber-400 hover:shadow-xl">
+          <article class="w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-md hover:border-amber-400 hover:shadow-xl">
 
             <img src="./img/ssubiendo-palmas.png"
                  alt="Ciclistas subiendo Las Palmas bajo la luna"
@@ -170,15 +175,15 @@
               <h3 class="text-2xl font-bold text-white">Luna en Las Palmas</h3>
 
               <dl class="space-y-2">
-                <div class="flex justify-between">
+                <div class="flex justify-between gap-4">
                   <dt class="text-sm text-slate-400">Distancia</dt>
                   <dd class="font-semibold text-white">22 km</dd>
                 </div>
-                <div class="flex justify-between">
+                <div class="flex justify-between gap-4">
                   <dt class="text-sm text-slate-400">Duración</dt>
                   <dd class="font-semibold text-white">3,5 h</dd>
                 </div>
-                <div class="flex justify-between">
+                <div class="flex justify-between gap-4">
                   <dt class="text-sm text-slate-400">Punto de encuentro</dt>
                   <dd class="font-semibold text-white">Sede de Rueda Libre</dd>
                 </div>
@@ -199,13 +204,14 @@
       </div>
     </section>
 
-    <!-- ¿CÓMO FUNCIONA?: grid de 4 columnas -->
-    <section id="como-funciona" class="py-16">
+    <!-- ¿CÓMO FUNCIONA?
+         Celular: 1 columna. Desde sm: 2 columnas. Desde lg: 4 columnas -->
+    <section id="como-funciona" class="py-12 lg:py-20">
       <div class="max-w-6xl mx-auto px-6 space-y-8">
 
-        <h2 class="text-2xl font-bold text-center text-white">¿Cómo funciona?</h2>
+        <h2 class="text-2xl font-bold text-center text-white lg:text-3xl">¿Cómo funciona?</h2>
 
-        <ol class="grid grid-cols-4 gap-6">
+        <ol class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
           <li class="space-y-2">
             <p class="text-3xl font-bold text-amber-400">1</p>
@@ -236,10 +242,10 @@
     </section>
 
     <!-- FRANJA DE INSCRIPCIÓN -->
-    <section id="inscripcion" class="bg-slate-800 py-16">
+    <section id="inscripcion" class="bg-slate-800 py-12 lg:py-20">
       <div class="max-w-6xl mx-auto px-6 space-y-6 text-center">
 
-        <h2 class="text-2xl font-bold text-white">Reserva tu lugar en la Rueda Nocturna</h2>
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Reserva tu lugar en la Rueda Nocturna</h2>
 
         <p class="text-lg leading-relaxed text-slate-300">
           Salidas de jueves a sábado desde la sede de Rueda Libre.
@@ -255,9 +261,10 @@
 
   </main>
 
-  <!-- PIE DE PÁGINA: flex con tres bloques -->
+  <!-- PIE DE PÁGINA
+       Celular: bloques apilados (flex-col). Desde md: en fila (md:flex-row) -->
   <footer class="border-t border-slate-700 py-8">
-    <div class="max-w-6xl mx-auto px-6 flex justify-between gap-6">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col gap-6 md:flex-row md:justify-between">
 
       <div class="space-y-2">
         <p class="text-xl font-bold text-white">Rueda Nocturna</p>
