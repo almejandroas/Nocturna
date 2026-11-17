@@ -72,3 +72,28 @@ Las clases sin prefijo son las del celular. Con `sm:` (640 px), `md:` (768 px) y
 ### Cambios en las cards
 Quité `max-w-sm` para que llenen su columna y agregué `gap-4` en las filas de datos
 para que no se peguen cuando la card es angosta.
+
+## MiniReto 7 - Tema de marca y modo oscuro
+
+### Tema
+En `src/input.css` definí con `@theme` los seis colores de la marca (Verde Ruta,
+Naranja Pedal, Azul Noche, Crema, Gris Asfalto y Amarillo Farol) y las fuentes
+Montserrat (`font-titulos`) y Open Sans (`font-cuerpo`), cargadas desde Google Fonts.
+Con `--color-*: initial` eliminé la paleta genérica de Tailwind.
+
+### Modo oscuro
+Estrategia por defecto (`prefers-color-scheme`). Sin prefijo es el modo claro; `dark:`
+cambia fondos, textos, cards, bordes, campos y foco.
+
+### Contraste (WCAG, mínimo 4.5:1)
+| Texto | Fondo | Proporción | ¿Cumple? | Qué hice |
+|---|---|---|---|---|
+| (llena con los resultados que obtuviste en WebAIM) | | | | |
+
+Verde Ruta sobre Azul Noche dio aproximadamente 3.0, no cumple. En modo oscuro no uso
+verde como texto: los acentos y el botón principal pasan a Amarillo Farol.
+Gris Asfalto sobre Azul Noche dio aproximadamente 2.7: en modo oscuro uso Crema al 70 %.
+
+### Pruebas
+Emulé `prefers-color-scheme: dark` en DevTools. Todas las secciones cambian y el modo
+claro sigue funcionando.

@@ -4,32 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kit de componentes - Rueda Nocturna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link href="./src/output.css" rel="stylesheet">
 </head>
-<body class="bg-slate-900">
+<body class="bg-crema font-cuerpo text-azul-noche dark:bg-azul-noche dark:text-white">
 
   <main class="max-w-4xl mx-auto px-6 py-16 space-y-16">
 
-    <h1 class="text-4xl font-bold text-center text-white">Kit de componentes</h1>
+    <h1 class="font-titulos text-4xl font-bold text-center text-azul-noche dark:text-white">Kit de componentes</h1>
 
     <!-- BOTONES -->
     <section class="space-y-6">
-      <h2 class="text-2xl font-bold text-white">Botones</h2>
+      <h2 class="font-titulos text-2xl font-bold text-azul-noche dark:text-white">Botones</h2>
 
       <div class="flex flex-wrap gap-4">
 
         <button type="button"
-                class="px-6 py-3 rounded-lg shadow-md bg-amber-400 text-slate-900 font-bold uppercase hover:bg-amber-300 focus:outline-hidden focus:ring-4 focus:ring-amber-200">
+                class="px-6 py-3 rounded-lg shadow-md bg-verde-ruta text-white font-titulos font-bold uppercase hover:brightness-110 focus:outline-hidden focus:ring-4 focus:ring-azul-noche dark:bg-amarillo-farol dark:text-azul-noche dark:focus:ring-amarillo-farol">
           Principal
         </button>
 
         <button type="button"
-                class="px-6 py-3 rounded-lg shadow-md bg-slate-700 text-white font-bold uppercase hover:bg-slate-600 focus:outline-hidden focus:ring-4 focus:ring-slate-400">
+                class="px-6 py-3 rounded-lg shadow-md bg-naranja-pedal text-azul-noche font-titulos font-bold uppercase hover:brightness-110 focus:outline-hidden focus:ring-4 focus:ring-azul-noche dark:focus:ring-amarillo-farol">
           Secundario
         </button>
 
         <button type="button"
-                class="px-6 py-3 rounded-lg shadow-md border-2 border-amber-400 text-amber-400 font-bold uppercase hover:bg-amber-400 hover:text-slate-900 focus:outline-hidden focus:ring-4 focus:ring-amber-200">
+                class="px-6 py-3 rounded-lg shadow-md border-2 border-verde-ruta text-verde-ruta font-titulos font-bold uppercase hover:bg-verde-ruta hover:text-white focus:outline-hidden focus:ring-4 focus:ring-azul-noche dark:border-naranja-pedal dark:text-naranja-pedal dark:hover:bg-naranja-pedal dark:hover:text-azul-noche dark:focus:ring-amarillo-farol">
           Contorno
         </button>
 
@@ -38,9 +41,9 @@
 
     <!-- CARD -->
     <section class="space-y-6">
-      <h2 class="text-2xl font-bold text-white">Card</h2>
+      <h2 class="font-titulos text-2xl font-bold text-azul-noche dark:text-white">Card</h2>
 
-      <article class="w-full max-w-sm overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-md hover:border-amber-400 hover:shadow-xl">
+      <article class="w-full max-w-sm overflow-hidden rounded-xl border border-azul-noche/15 bg-white shadow-md hover:border-verde-ruta hover:shadow-xl dark:border-white/20 dark:bg-white/10 dark:hover:border-naranja-pedal">
 
         <img src="./img/luces-del-centro.jpg"
              alt="Ciclistas con luces LED en el centro de Medellín"
@@ -48,32 +51,32 @@
 
         <div class="p-6 space-y-4">
 
-          <p class="inline-block rounded-full px-3 py-1 text-xs font-bold uppercase bg-emerald-100 text-emerald-800">
+          <p class="inline-block rounded-full border border-verde-ruta bg-verde-ruta px-3 py-1 text-xs font-bold uppercase text-white">
             Nivel: Fácil
           </p>
 
-          <h3 class="text-2xl font-bold text-white">Luces del Centro</h3>
+          <h3 class="font-titulos text-2xl font-bold text-azul-noche dark:text-white">Luces del Centro</h3>
 
           <dl class="space-y-2">
-            <div class="flex justify-between">
-              <dt class="text-sm text-slate-400">Distancia</dt>
-              <dd class="font-semibold text-white">10 km</dd>
+            <div class="flex justify-between gap-4">
+              <dt class="text-sm text-gris-asfalto dark:text-crema/70">Distancia</dt>
+              <dd class="font-semibold text-azul-noche dark:text-white">10 km</dd>
             </div>
-            <div class="flex justify-between">
-              <dt class="text-sm text-slate-400">Duración</dt>
-              <dd class="font-semibold text-white">2 h</dd>
+            <div class="flex justify-between gap-4">
+              <dt class="text-sm text-gris-asfalto dark:text-crema/70">Duración</dt>
+              <dd class="font-semibold text-azul-noche dark:text-white">2 h</dd>
             </div>
-            <div class="flex justify-between">
-              <dt class="text-sm text-slate-400">Punto de encuentro</dt>
-              <dd class="font-semibold text-white">Sede de Rueda Libre</dd>
+            <div class="flex justify-between gap-4">
+              <dt class="text-sm text-gris-asfalto dark:text-crema/70">Punto de encuentro</dt>
+              <dd class="font-semibold text-azul-noche dark:text-white">Sede de Rueda Libre</dd>
             </div>
           </dl>
 
-          <p class="text-3xl font-bold text-amber-400">$55.000</p>
+          <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">$55.000</p>
 
           <button type="button"
                   aria-label="Inscríbete en Luces del Centro"
-                  class="w-full px-6 py-3 rounded-lg shadow-md bg-amber-400 text-slate-900 font-bold uppercase hover:bg-amber-300 focus:outline-hidden focus:ring-4 focus:ring-amber-200">
+                  class="w-full px-6 py-3 rounded-lg shadow-md bg-verde-ruta text-white font-titulos font-bold uppercase hover:brightness-110 focus:outline-hidden focus:ring-4 focus:ring-azul-noche dark:bg-amarillo-farol dark:text-azul-noche dark:focus:ring-amarillo-farol">
             Inscríbete
           </button>
 
@@ -83,26 +86,26 @@
 
     <!-- ALERTAS -->
     <section class="space-y-6">
-      <h2 class="text-2xl font-bold text-white">Alertas</h2>
+      <h2 class="font-titulos text-2xl font-bold text-azul-noche dark:text-white">Alertas</h2>
 
       <div class="space-y-4">
 
         <!-- Información -->
-        <div class="rounded-lg border-l-4 border-sky-500 bg-sky-100 px-4 py-3">
-          <p class="font-bold text-sky-900">Información</p>
-          <p class="text-sky-800">Las salidas parten de la sede de Rueda Libre.</p>
+        <div class="rounded-lg border-l-4 border-azul-noche bg-azul-noche/10 px-4 py-3 text-azul-noche dark:border-white dark:bg-white/10 dark:text-white">
+          <p class="font-titulos font-bold">Información</p>
+          <p>Las salidas parten de la sede de Rueda Libre.</p>
         </div>
 
         <!-- Éxito: role="status" avisa a los lectores de pantalla -->
-        <div role="status" class="rounded-lg border-l-4 border-emerald-500 bg-emerald-100 px-4 py-3">
-          <p class="font-bold text-emerald-900">Éxito</p>
-          <p class="text-emerald-800">Tu inscripción quedó registrada.</p>
+        <div role="status" class="rounded-lg border-l-4 border-verde-ruta bg-verde-ruta/10 px-4 py-3 text-azul-noche dark:bg-white/10 dark:text-white">
+          <p class="font-titulos font-bold">Éxito</p>
+          <p>Tu inscripción quedó registrada.</p>
         </div>
 
         <!-- Advertencia -->
-        <div class="rounded-lg border-l-4 border-amber-500 bg-amber-100 px-4 py-3">
-          <p class="font-bold text-amber-900">Advertencia</p>
-          <p class="text-amber-800">Lleva ropa de abrigo, de noche la temperatura baja.</p>
+        <div class="rounded-lg border-l-4 border-naranja-pedal bg-naranja-pedal/20 px-4 py-3 text-azul-noche dark:bg-white/10 dark:text-white">
+          <p class="font-titulos font-bold">Advertencia</p>
+          <p>Lleva ropa de abrigo, de noche la temperatura baja.</p>
         </div>
 
       </div>
@@ -110,26 +113,26 @@
 
     <!-- FORMULARIO -->
     <section class="space-y-6">
-      <h2 class="text-2xl font-bold text-white">Campos de formulario</h2>
+      <h2 class="font-titulos text-2xl font-bold text-azul-noche dark:text-white">Campos de formulario</h2>
 
       <form class="max-w-sm space-y-6">
 
         <div class="space-y-2">
-          <label for="correo" class="block text-sm font-semibold text-white">Correo</label>
+          <label for="correo" class="block font-titulos text-sm font-semibold text-azul-noche dark:text-white">Correo</label>
           <input type="email" id="correo" name="correo"
                  placeholder="tucorreo@ejemplo.com"
                  aria-describedby="ayuda-correo"
-                 class="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-white placeholder:text-slate-400 focus:outline-hidden focus:border-amber-400 focus:ring-4 focus:ring-amber-200">
-          <p id="ayuda-correo" class="text-sm text-slate-400">Te enviaremos la confirmación aquí.</p>
+                 class="w-full rounded-lg border border-gris-asfalto bg-white px-4 py-3 text-azul-noche placeholder:text-gris-asfalto focus:outline-hidden focus:ring-4 focus:ring-azul-noche dark:border-white/40 dark:bg-white/10 dark:text-white dark:placeholder:text-crema/70 dark:focus:ring-amarillo-farol">
+          <p id="ayuda-correo" class="text-sm text-gris-asfalto dark:text-crema/70">Te enviaremos la confirmación aquí.</p>
         </div>
 
         <div class="space-y-2">
-          <label for="celular" class="block text-sm font-semibold text-white">Celular</label>
+          <label for="celular" class="block font-titulos text-sm font-semibold text-azul-noche dark:text-white">Celular</label>
           <input type="tel" id="celular" name="celular"
                  placeholder="300 123 4567"
                  aria-describedby="ayuda-celular"
-                 class="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-white placeholder:text-slate-400 focus:outline-hidden focus:border-amber-400 focus:ring-4 focus:ring-amber-200">
-          <p id="ayuda-celular" class="text-sm text-slate-400">Solo para avisos de la salida.</p>
+                 class="w-full rounded-lg border border-gris-asfalto bg-white px-4 py-3 text-azul-noche placeholder:text-gris-asfalto focus:outline-hidden focus:ring-4 focus:ring-azul-noche dark:border-white/40 dark:bg-white/10 dark:text-white dark:placeholder:text-crema/70 dark:focus:ring-amarillo-farol">
+          <p id="ayuda-celular" class="text-sm text-gris-asfalto dark:text-crema/70">Solo para avisos de la salida.</p>
         </div>
 
       </form>

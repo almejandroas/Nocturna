@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@theme {
+  /* Borra la paleta genérica: solo existirán los colores de la marca */
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Colores de marca */
+  --color-verde-ruta: #1e7a4f;
+  --color-naranja-pedal: #f39a2b;
+  --color-azul-noche: #14213d;
+  --color-crema: #faf6ef;
+  --color-gris-asfalto: #5b6470;
+  --color-amarillo-farol: #ffd166;
+
+  /* Fuentes de marca */
+  --font-titulos: "Montserrat", sans-serif;
+  --font-cuerpo: "Open Sans", sans-serif;
+}
